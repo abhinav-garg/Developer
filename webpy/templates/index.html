@@ -1,0 +1,15 @@
+$def with (form)
+
+<html>
+	<head>
+		<title>Computations</title>
+	</head>
+	<body>
+		<div id = 'heading'>Computations</div>
+		<div id = 'form'>
+			<form name = 'main' method = 'post'>
+				$if not form.valid: <p class = 'error'>Run! It's the end of the internet!</p>
+			</form>
+		</div>
+	</body>
+</html>
