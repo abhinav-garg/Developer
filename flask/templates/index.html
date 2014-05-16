@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Basic Computations</title>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'style.css')}}">
+		<style type="text/css">
+			textarea {
+				width: 500px;
+				height: 200px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 40px;
+				margin-bottom: 40px;
+				padding: 10px;
+				font-size: 150%;
+			}
+			div {
+				text-align: center;
+			}
+			#Header {
+				font-size: 200%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id = "Header">Basic Computations</div>
+		<div id = 'form'>
+			<form name = "main" method = "post" id = "calc" action = "{{url_for('form_action')}}">
+				<textarea name = 'query'>{{result}}</textarea>
+				<input type = "submit" name = "submit" value = "Evaluate">
+			</form>
+		</div>>
+	</body>
+</html>
