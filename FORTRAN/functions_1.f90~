@@ -1,0 +1,14 @@
+INTEGER FUNCTION LargerRoot (a, b, c)
+  IMPLICIT NONE
+  
+  REAL, INTENT(IN) :: a, b, c
+  REAL :: d, r1, r2
+  d = SQRT(b * b - 4.0 * a * c)
+  r1 = (-b + d) / (2.0 * a)
+  r2 = (-b - d) / (2.0 * a)
+  IF (r1 >= r2) THEN
+     LargerRoot = r1   ! The function name store its return value
+  ELSE
+     LargerRoot = r2
+  END IF
+END FUNCTION LargerRoot

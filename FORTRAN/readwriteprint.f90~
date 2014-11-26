@@ -1,0 +1,9 @@
+PROGRAM readWritePrint
+
+CHARACTER(LEN = 10) :: name
+REAL :: height, length
+INTEGER :: count, MaxLength
+
+RAED(*,*) name, height, length, count, MaxLength
+
+END PROGRAM readWritePrint

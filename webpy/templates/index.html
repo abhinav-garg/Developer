@@ -9,6 +9,7 @@ $def with (form)
 		<div id = 'form'>
 			<form name = 'main' method = 'post'>
 				$if not form.valid: <p class = 'error'>Run! It's the end of the internet!</p>
+				$:form.render()
 			</form>
 		</div>
 	</body>

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Basic Computations</title>
-		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'style.css')}}">
+		<!-- <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'style.css')}}"> -->
 		<style type="text/css">
 			textarea {
 				width: 500px;
@@ -21,15 +21,27 @@
 			#Header {
 				font-size: 200%;
 			}
+			#instructions {
+				margin-top: 30px;
+			}
 		</style>
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	</head>
 	<body>
 		<div id = "Header">Basic Computations</div>
-		<div id = 'form'>
-			<form name = "main" method = "post" id = "calc" action = "{{url_for('form_action')}}">
-				<textarea name = 'query'>{{result}}</textarea>
-				<input type = "submit" name = "submit" value = "Evaluate">
-			</form>
-		</div>>
+		<div id = "comp_container">
+			<div id = 'instructions'>
+				Enter your calculations as normal Math expressions <br/>
+				Enter matrices as [[1,0,0],[0,1,0],[0,0,1]] <br/>
+				<!-- Store matrices in variables, and evaluate transpose as A.T, inverse as A.I <br/>  -->
+				The last result is accessible as the 'ans' variable 
+			</div>
+			<div id = 'form'>
+				<form name = "main" method = "post" id = "calc" action = "{{url_for('index')}}">
+					<textarea name = 'query'>{{result}}</textarea>
+					<input type = "submit" name = "submit" value = "Evaluate">
+				</form>
+			</div>
+		</div>
 	</body>
 </html>
